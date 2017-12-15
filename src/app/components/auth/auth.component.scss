@@ -1,0 +1,89 @@
+.auth-box {
+    width:360px;
+    max-width:90%;
+    margin:50px auto 0;
+    h1 {
+        text-align:center;
+        margin-bottom:30px;
+    }
+    .form-group {
+        position:relative;
+        .form-control {
+            border-radius:0;
+            box-shadow: none;
+            border-color:#e7ecee;
+            color:#555;
+            height:48px;
+            &.ng-invalid.ng-touched.ng-dirty {
+              border-color:red;
+            }
+        }
+        .input-error {
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          width: 100%;
+          margin-top: -14px;
+          margin-left:10px;
+          padding: 5px 10px;
+          font-size: 12px;
+          background: #f2dede;
+          color: #a94442;
+          border-radius: 4px;
+          border:1px solid #ebccd1;
+          &:after,&:before {
+            content: "";
+            position: absolute;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            left: -9px;
+            top: 50%;
+            margin-top: -7px;
+          }
+          &:after {
+            border-right: 8px solid #ebccd1;
+            z-index: 1;
+          }
+          &:before {
+            border-right: 8px solid #f2dede;
+            left: -7px;
+            z-index: 2;
+          }
+        }
+        &:first-child {
+            .form-control {
+                margin-bottom:-1px;
+            }
+        }
+    }
+    .btn {
+        margin-top:20px;
+        border-radius:0;
+    }
+    .login-box__divider {
+        margin:10px 0;
+        position:relative;
+        text-align:center;
+        span {
+            display: inline-block;
+            padding:10px;
+            background-color:#f0f3f4;
+            position:relative;
+        }
+        &:after {
+            position: absolute;
+            content:"";
+            left:0;
+            width:100%;
+            top:50%;
+            height:1px;
+            background:#ccc;
+            z-index:-1;
+        }
+    }
+    .login-box__social {
+        button {
+            margin:0 0 20px;
+        }
+    }
+}

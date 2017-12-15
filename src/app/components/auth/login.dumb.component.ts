@@ -1,18 +1,20 @@
 import {Component,Input,Output,EventEmitter} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
     selector:'app-login',
-    templateUrl:'./app-auth-form.html',
-    styleUrls:['./login.component.scss']
-}) 
+    templateUrl:'./app-login-form.html',
+    styleUrls:['./auth.component.scss']
+})
 
 export class LoginDumbComponent {
     @Input() loginForm: FormGroup;
+    @Input() formErrors: Object;
     @Output() googleLogin = new EventEmitter();
     @Output() facebookLogin = new EventEmitter();
-    loginUser() {
-        console.log(this.loginForm.value);
+    @Output() loginuser = new EventEmitter();
+    loginUser(loginForm) {
+        this.loginuser.emit(loginForm);
     }
     signInGoogle() {
         this.googleLogin.emit();
