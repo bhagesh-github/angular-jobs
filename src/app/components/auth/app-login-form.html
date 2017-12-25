@@ -1,5 +1,6 @@
 <div class="auth-box">
     <h1>Sign In</h1>
+    {{error}}
     <form [formGroup]="loginForm" (submit)="loginUser(loginForm)">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Email" formControlName="email"/>

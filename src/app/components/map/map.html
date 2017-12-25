@@ -1,0 +1,16 @@
+<form class="search-form">
+    <input type="text" class="form-control" formControlName="search"/>
+    <button type="submit" class="btn btn-info">Search Job</button>
+</form>
+<agm-map class="search-map"
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="zoom"
+    (mapClick)="mapClicked($event)">
+    <agm-marker
+        [latitude]="marker.lat"
+        [longitude]="marker.lng"
+        [markerDraggable]="marker.draggable"
+        (dragEnd)="markerDragEnd(marker, $event)">
+    </agm-marker>
+</agm-map>

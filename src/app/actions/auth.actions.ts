@@ -9,7 +9,7 @@ export class LoginUser {
 
 export class LoginUserSuccess {
     readonly type = actions.LOGIN_USER_SUCCESS;
-    constructor(public payload:UserModel) {}
+    constructor(public payload:any) {}
 }
 
 export class LoginUserError {
@@ -17,4 +17,24 @@ export class LoginUserError {
     constructor(public payload:any) {}
 }
 
-export type All = LoginUser | LoginUserSuccess | LoginUserError;
+export class SignupUser {
+    readonly type = actions.SIGNUP_USER;
+    constructor(public payload:UserModel) {}
+}
+
+export class SignupUserSuccess {
+    readonly type = actions.SIGNUP_USER_SUCCESS;
+    constructor(public payload:any) {}
+}
+
+export class SignupUserError {
+    readonly type = actions.SIGNUP_USER_ERROR;
+    constructor(public payload:any) {}
+}
+
+export class Alert {
+    readonly type = actions.ALERT;
+    constructor(public payload:any) {}
+}
+
+export type All = LoginUser | LoginUserSuccess | LoginUserError | SignupUser | SignupUserSuccess | SignupUserError | Alert;

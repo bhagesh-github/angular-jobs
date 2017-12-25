@@ -1,0 +1,24 @@
+.search-map {
+    height:100%; 
+    position:absolute; 
+    width:100%; 
+    left:0; 
+    top:0;
+}
+.search-form {
+    input {
+        position:relative;
+        width:50%;
+        margin:10px auto;
+        z-index:1;
+    }
+    .btn {
+        position:absolute;
+        bottom:10px;
+        left:0;
+        right:0;
+        width:50%;
+        margin:0 auto;
+        z-index:1;
+    }
+}

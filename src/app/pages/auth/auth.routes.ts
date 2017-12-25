@@ -12,6 +12,7 @@ import { SignupComponent } from './signup.component';
 
 import { LoginDumbComponent } from '../../components/auth/login.dumb.component';
 import { SignupDumbComponent } from '../../components/auth/signup.dumb.component';
+import { AlertComponent } from '../../components/alerts/alerts.component';
 import { AuthService } from './auth.services';
 
 export const firebaseConfig = {
@@ -56,8 +57,8 @@ const AUTH_ROUTES: Routes = [
         AngularFireDatabaseModule,
         AngularFireAuthModule
     ],
-    exports:[],
-    declarations:[AuthComponent,LoginComponent,LoginDumbComponent,SignupComponent,SignupDumbComponent],
+    exports:[AlertComponent],
+    declarations:[AuthComponent,LoginComponent,LoginDumbComponent,SignupComponent,SignupDumbComponent,AlertComponent],
     providers:[AuthService]
 })
 

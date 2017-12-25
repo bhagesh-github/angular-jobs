@@ -10,6 +10,7 @@ import { FormGroup } from '@angular/forms';
 export class LoginDumbComponent {
     @Input() loginForm: FormGroup;
     @Input() formErrors: Object;
+    @Input() error: string;
     @Output() googleLogin = new EventEmitter();
     @Output() facebookLogin = new EventEmitter();
     @Output() loginuser = new EventEmitter();
